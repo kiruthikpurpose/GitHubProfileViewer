@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GitHub Profile Viewer</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.png" type="image/png">
+        
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    </head>
+    
+<body>
+    <div class="container">
+        <header>
+            <img src="favicon.png" alt="GitHub Logo" class="github-logo">
+            <h1>GitHub Profile Viewer</h1>
+        </header>
+        <div class="search-container">
+            <input type="text" id="username" placeholder="Enter GitHub username">
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Fetching GitHub magic...</p>
+        </div>
+        <div id="profile" class="hidden">
+            <div class="profile-header">
+                <img id="avatar" src="" alt="User Avatar">
+                <div class="profile-info">
+                    <h2 id="name"></h2>
+                    <p id="login"></p>
+                    <p id="pronouns"></p>
+                    <p id="bio"></p>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span id="followers"></span> followers
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-user-friends"></i>
+                    <span id="following"></span> following
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-code-branch"></i>
+                    <span id="repositories"></span> repositories
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <span id="company"></span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="location"></span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span id="timezone"></span>
+                </div>
+            </div>
+            <div class="github-stats">
+                <h3>GitHub Stats</h3>
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h4>Top Languages</h4>
+                        <img id="top-langs" src="" alt="Top Languages">
+                    </div>
+                    <div class="stat-box">
+                        <h4>Streak Stats</h4>
+                        <img id="streak-stats" src="" alt="Streak Stats">
+                    </div>
+                    <div class="stat-box">
+                        <h4>Trophies</h4>
+                        <img id="trophies" src="" alt="Trophies">
+                    </div>
+                </div>
+            </div>
+            <div class="readme">
+                <h3>README</h3>
+                <div id="readme-content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
