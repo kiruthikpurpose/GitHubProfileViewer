@@ -80,18 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    async function fetchReadme(username) {
-        try {
-            const response = await fetch(`${RAW_CONTENT_URL}${username}/${username}/main/README.md`);
-            if (!response.ok) throw new Error('README not found');
-            const readmeContent = await response.text();
-            document.getElementById('readme-content').textContent = readmeContent;
-        } catch (error) {
-            console.error('Error fetching README:', error);
-            document.getElementById('readme-content').textContent = 'README not available';
-        }
-    }
-
     function showLoading() {
         if (loadingElement) loadingElement.classList.remove('hidden');
         if (profileElement) profileElement.classList.add('hidden');
