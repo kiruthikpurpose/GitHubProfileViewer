@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const userData = await response.json();
 
             updateProfile(userData);
-            await fetchReadme(username);
         } catch (error) {
             alert(error.message);
         } finally {
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const locationEl = document.getElementById('location');
         const timezoneEl = document.getElementById('timezone');
 
-        // Ensure all elements exist before modifying their textContent or attributes
         if (avatarEl) avatarEl.src = userData.avatar_url;
         if (nameEl) nameEl.textContent = userData.name || userData.login;
         if (loginEl) loginEl.textContent = `@${userData.login}`;
